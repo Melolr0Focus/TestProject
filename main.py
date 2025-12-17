@@ -1,5 +1,7 @@
 import asyncio
 import random
+import os
+from dotenv import load_dotenv
 from datetime import datetime, timedelta
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import (
@@ -8,7 +10,8 @@ from aiogram.types import (
 from aiogram.enums.chat_member_status import ChatMemberStatus
 from aiogram.filters import Command
 
-TOKEN = "7574427369:AAEIMiiApLJw8pGfIPVrc90yFP_Fnl6XZhs"
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = "-1003137717417"
 
 bot = Bot(token=TOKEN)
